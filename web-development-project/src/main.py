@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr, Field
 from typing import List
 
 app = FastAPI()
@@ -19,9 +19,9 @@ def home():
     return {"message": "Welcome to Resume Enhancer API"}
 
 class User(BaseModel):
-    name: str
-    email: str
-    experience: int
+    name: str = Field(..., min_length=1)
+    email: EmailStr
+    experience: int = Field(..., ge=0)
 
 # In-memory storage for users
 users = [
