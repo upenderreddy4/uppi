@@ -1,0 +1,22 @@
+{
+  "name": "web-development-project",
+  "version": "1.0.0",
+  "description": "A web development project similar to TEKsystems.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'",
+    "test": "echo 'No tests specified.'"
+  },
+  "keywords": [
+    "web",
+    "development",
+    "project"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
